@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>Flutterwave Test</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="right">
+          <li>
+            <a href="https://blooming-mesa-23844.herokuapp.com/"
+              >Task 1- BVN Verify</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="container row">
+      <h5>Transaction Details</h5>
+      <div class="row">
+        <div class="col s12 m9">
+          <div class="card">
+            <div class="card-content darken-4">
+              <span class="card-title">Driver Details</span>
+              <p>Ref ID :<%=subaccount %></p>
+              <p>Transaction Amount: <%=data.currency %><%=data.amount %></p>
+              <p>Business Name: <%=data.acctbusinessname %></p>
+              <p>
+                Transaction Split Type: <%=transaction_charge_type %>
+              </p>
+              <p>
+                Amount Deducted : <%=data.currency %><%=transaction_charge %>
+              </p>
+              <p>
+                Final Amount : <%=data.currency %><%=data.amount -
+                transaction_charge %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-content darken-4">
+              <span class="card-title">Merchant Commission</span>
+              <h3><%=data.currency %><%=transaction_charge %></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        class="waves-effect waves-light btn"
+        id="submit"
+        href="https://radiant-harbor-86788.herokuapp.com"
+        >Back to Home page</a
+      >
+    </section>
+  </body>
+</html>
